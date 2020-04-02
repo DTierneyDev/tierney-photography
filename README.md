@@ -1,5 +1,5 @@
-# Tierney Photography
-[![Build Status](https://travis-ci.org/Cobonkoi/tierney-photography.svg?branch=master)](https://travis-ci.org/Cobonkoi/tierney-photography)
+# Tierney Photography [![Build Status](https://travis-ci.org/Cobonkoi/tierney-photography.svg?branch=master)](https://travis-ci.org/Cobonkoi/tierney-photography)
+
 One or two paragraphs providing an overview of your project.
 
 Essentially, this part is your sales pitch.
