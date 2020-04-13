@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load bootstrap_tags %}
+
 {% block page_title %}Login Page{% endblock%}
 
 {% block content %}
@@ -17,7 +19,7 @@
         <div class="row">
             <form method="POST">
             {% csrf_token %}
-            {{ login_form }}
+            {{ login_form | as_bootstrap }}
             <button type="submit" class="btn btn-primary">Login</button>
             </form>
         </div>
