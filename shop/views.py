@@ -27,10 +27,12 @@ def create_or_edit_photoset(request, pk=None):
 
     photoset = get_object_or_404(PhotoSet, pk=pk) if pk else None
     if request.method == "POST":
-        form = PhotoSetForm(request.POST, request.FILES, instance=photoset)
-        if form.is_valid():
-            photoset = form.save()
+        photoset_form = PhotoSetForm(request.POST, request.FILES, instance=photoset)
+        if photoset_form.is_valid():
+            photoset = photoset_form.save()
             return redirect(photoset_detail, photoset.pk)
+        else:
+            photoset_form.add_error(None, "Unable to upload Photoset.")
     else:
-        form = PhotoSetForm(instance=photoset)
-    return render(request, 'photosetform.html', {'form': form})
+        photoset_form = PhotoSetForm(instance=photoset)
+    return render(request, 'photosetform.html', {'photoset_form': photoset_form})

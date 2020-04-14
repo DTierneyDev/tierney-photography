@@ -20,7 +20,7 @@ from django.views.static import serve
 from .settings import MEDIA_ROOT
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^admin/', admin.site.urls),
     url(r'^$', RedirectView.as_view(url='accounts/')),
     url(r'accounts/', include('accounts.urls')),
     url(r'shop/', include('shop.urls')),

@@ -8,11 +8,10 @@ class PhotoSet(models.Model):
     description = models.TextField()
     uploaded_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True, default=timezone.now)
-    price = models.IntegerField(blank=False)
+    price = models.DecimalField(blank=False, default=10, decimal_places=2, max_digits=5)
     sales = models.IntegerField(default=0)
-    tag = models.CharField(max_length=75, blank=True, null=True)
     preview_image = models.ImageField(upload_to="img")
-    photo_set = models.FileField(upload_to=title)
+    photo_set = models.FileField(upload_to="photosets")
 
     def __unicode__(self):
         return self.title
