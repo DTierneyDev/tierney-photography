@@ -1,0 +1,1 @@
+web: gunicorn tierneyphotography.wsgi:application
