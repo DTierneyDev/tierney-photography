@@ -13,5 +13,5 @@ class PhotoSet(models.Model):
     preview_image = models.ImageField(upload_to="img")
     photo_set = models.FileField(upload_to="photosets")
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
