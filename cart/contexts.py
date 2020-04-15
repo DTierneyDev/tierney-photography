@@ -10,12 +10,13 @@ def cart_contents(request):
     cart_items = []
     total = 0
     photoset_count = 0
-    for id in cart.items():
+
+    for id in cart.keys():
         photoset = get_object_or_404(PhotoSet, pk=id)
         total += photoset.price
         photoset_count += 1
         cart_items.append({'id': id, 'photoset': photoset})
-        
+
     # for id, quantity in cart.items():
     #     photoset = get_object_or_404(PhotoSet, pk=id)
     #     total += quantity * photoset.price

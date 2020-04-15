@@ -30,8 +30,8 @@
                 <tr>
 					<th scope="row"><a action="{% url 'remove_from_cart' item.id">X</a></th>
 					<td>{{ item.photoset.preview_image }}</td>
-					<td>{{ item.photoset.name }}</td>
-					<td>{{ item.photoset.price }}</td>
+					<td>{{ item.photoset.title }}</td>
+					<td>£ {{ item.photoset.price }}</td>
 				</tr>
                 {% endfor %}
 				<!-- /For loop to input cart contents-->
@@ -39,14 +39,15 @@
 				<!-- Total to go in here with checkout button-->
 				<tr class="table-secondary">
 					<th scope="row"></th>
-					<td>Cart Total</td>
+					<td></td>
+					<td>Cart Total: </td>
 					<td>£ {{ total }}</td>
-					<td><a href="/" type="button" class="btn btn-success">Checkout</a></td>
 				</tr>
 				<!-- /Total to go in here with checkout button-->
 
 			</tbody>
 		</table>
+        <a href="/" type="button" class="btn btn-success">Checkout</a>
 	</div>
 </div>
 

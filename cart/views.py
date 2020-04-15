@@ -8,11 +8,12 @@ def view_cart(request):
 
 def add_to_cart(request, id):
     """Add a photoset to the cart"""
-    # quantity = int(request.POST.get('quantity'))
 
     cart = request.session.get('cart', {})
-    cart[id] = cart.get(id)
-    
+
+    if id not in cart.keys():
+        cart[id] = id
+
     # if id in cart:
     #     cart[id] = int(cart[id]) + quantity
     # else:
