@@ -21,7 +21,7 @@
 				</div>
 				<div class="card-body">
 					<div class="card-text">£ {{ photoset.price }}</div>
-					<a action="{% url 'add_to_cart' photoset.id %}" class="btn btn-danger btn-sm">Add to cart</a>
+					<a href="{% url 'add_to_cart' photoset.id %}" class="btn btn-danger btn-sm">Add to cart</a>
 				</div>
 				<div class="card-footer text-muted">
 					{{ photoset.published_date }}

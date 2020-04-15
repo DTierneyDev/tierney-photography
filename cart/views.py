@@ -14,11 +14,6 @@ def add_to_cart(request, id):
     if id not in cart.keys():
         cart[id] = id
 
-    # if id in cart:
-    #     cart[id] = int(cart[id]) + quantity
-    # else:
-    #     cart[id] = cart.get(id, quantity)
-
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
 
