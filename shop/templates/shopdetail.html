@@ -15,8 +15,8 @@
     <div class="row">
 		<div class="col-12">
 			<div class="card border-primary mb-3">
-				<img style="height: 200px; width: 100%; display: block;" src="{{ MEDIA_URL }}{{ photoset.preview_image }}" alt="Card image">
-				<div class="card-body">
+				<div class="photoset-preview-image" style="background-image: url('{{ MEDIA_URL }}{{ photoset.preview_image }}')" alt="Card image"></div>
+                <div class="card-body">
 					<p class="card-text">{{ photoset.description }}</p>
 				</div>
 				<div class="card-body">

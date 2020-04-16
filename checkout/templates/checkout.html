@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+{% block page_title %}Checkout{% endblock %}
+
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock head_js %}
+
+{% block content %}
+
+<div class="container mt-4">
+	<div class="col-12">
+		<div class="row">
+			<h1>Checkout</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container mt-4">
+	<div class="row">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col"></th>
+					<th scope="col">Image</th>
+					<th scope="col">Photoset</th>
+					<th scope="col">Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for item in cart_items %}
+                <tr>
+					<th scope="row"><a href="{% url 'remove_from_cart' item.id %}">X</a></th>
+					<td><img style="height: 75px; width: 75px" src="{{ MEDIA_URL }}{{ item.photoset.preview_image }}" alt="Card image"></td>
+					<td>{{ item.photoset.title }}</td>
+					<td>£ {{ item.photoset.price }}</td>
+				</tr>
+                {% endfor %}
+				<tr class="table-secondary">
+					<th scope="row"></th>
+					<td></td>
+					<td>Cart Total: </td>
+					<td>£ {{ total }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+    <legend>Payment Details</legend>
+
+    <div id="credit-card-errors" style="display:none">
+        <div class="alert-message block-message error" id="stripe-error-message"></div>
+    </div>
+
+    <div class="form-group col-md-12">
+        {{ order_form | as_bootstrap }}
+    </div>
+
+    <div class="form-group col-md-12">
+        {{ payment_form | as_bootstrap }}
+    </div>
+
+    {% csrf_token %}
+    <div class="form-group col-md-12">
+        <input class="btn btn-primary" id="sumbit_payment_btn" name="commit" type="submit" value="Submit Payment">
+    </div>
+</form>
+
+{% endblock %}

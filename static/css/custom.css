@@ -1,0 +1,14 @@
+
+
+
+/* -- IMAGES -- */
+
+.photoset-preview-image {
+    height: 200px;
+    width: 100%;
+    display: block;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
