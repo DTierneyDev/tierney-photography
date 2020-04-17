@@ -45,6 +45,9 @@ This was because I wanted people to be able to trust that what they were buying,
 - [Shop - Desktop](wireframes/shop-desktop.png).
 - [Shop - Tablet](wireframes/shop-tablet.png).
 - [Shop - Mobile](wireframes/shop-mobile.png).
+- [Cart - Desktop](wireframes/cart-desktop.png).
+- [Cart - Tablet](wireframes/cart-tablet.png).
+- [Cart - Mobile](wireframes/cart-mobile.png).
 - [About - Desktop](wireframes/about-desktop.png).
 - [About - Tablet](wireframes/about-tablet.png).
 - [About - Mobile](wireframes/about-mobile.png).
