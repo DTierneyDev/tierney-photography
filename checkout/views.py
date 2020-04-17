@@ -53,7 +53,11 @@ def checkout(request):
             print(payment_form.errors)
             messages.error(request, "We were unable to take a payment with that card!")
     else:
-        payment_form = MakePaymentForm()
-        order_form = OrderForm()
+        if request.session.get('cart', {}) == {}:
+            messages.error(request, "You cannot checkout with no items in the cart")
+            return redirect(reverse('view_cart'))
+        else:
+            payment_form = MakePaymentForm()
+            order_form = OrderForm()
 
     return render(request, 'checkout.html', {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})

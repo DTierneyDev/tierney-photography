@@ -9,7 +9,7 @@
 	<title>{% block page_title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     {% block head_js %}
@@ -26,8 +26,8 @@
 
 		<div class="navbar-collapse collapse" id="navbarColor01" style="">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'index' %}">Home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Gallery</a>
@@ -62,7 +62,7 @@
 			</ul>
             <ul class="navbar-nav inline my-2 my-lg-0">
                 <li class="nav-item">
-					<a class="nav-link" href="{% url 'view_cart' %}">Cart ({{ photoset_count }})</a>
+					<a class="nav-link" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg"></i> Cart ({{ photoset_count }})</a>
 				</li>
             </ul>
 		</div>
