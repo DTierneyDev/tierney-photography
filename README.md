@@ -1,17 +1,36 @@
 # Tierney Photography [![Build Status](https://travis-ci.org/Cobonkoi/tierney-photography.svg?branch=master)](https://travis-ci.org/Cobonkoi/tierney-photography)
 
-One or two paragraphs providing an overview of your project.
+Welcome to Tierney Photography. This is the official website for the photographer, Tierney.
 
-Essentially, this part is your sales pitch.
- 
+Using this website you will learn more about him as a person, see examples of his work and be able to buy his photosets for your own use.
+
+The goals of this site are to:
+- Allow users to learn more about the photographer, Tierney.
+- Allow users to see examples of his past works.
+- Allow users to buy photosets from him, and download them to use as they wish.
+
+## Demo
+
+A demo can be viewed on Heroku [here](https://tierney-photography.herokuapp.com/).
+
 ## UX
- 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+My goal with the design of this site, was to make it look professional.
+This was because I wanted people to be able to trust that what they were buying, was of a high quality.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+#### User Stories
+
+1. As a new visitor to the site, I want to be able to easily navigate the site, so that I can find what I want easily.
+2. As a new visitor to the site, I want to see examples of the owners work, so I can decide whether I want to buy some of it.
+3. As a new visitor to the site, I want to learn more about the owner, so that I can decide whether to follow their journey on social media.
+4. As a new visitor to the site, I want to be able to register/login to the site, so that I can checkout photosets.
+5. As an interested shopper, I want to be able to access the shop and see what is on sale, so that I can browse photosets.
+6. As an interested shopper, I want to be able to add photosets to my cart, so that I can purchase more than one at a time.
+7. As a purchaser, I want to be able to view and download my past orders, so that I can access the content that I have paid for.
+
+#### Wireframe Mockups
+
+
 
 ## Features
 
@@ -23,10 +42,8 @@ In this section, you should go over the different parts of your project, and des
 
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
 ### Features Left to Implement
-- Another feature idea
+- A search feature for the shop. This was left out due to time constraints and could certainly be added in the future.
 
 ## Technologies Used
 
@@ -69,13 +86,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 
 ## Credits
-
-### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
-
 ### Media
-- The photos used in this site were obtained from ...
+- The photos used in this site were taken by myself (As you can tell I'm not a real photographer)
 
-### Acknowledgements
-
-- I received inspiration for this project from X
+This is for educational use.
