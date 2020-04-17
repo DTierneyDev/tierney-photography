@@ -7,6 +7,8 @@ Using this website you will learn more about him as a person, see examples of hi
 The goals of this site are to:
 - Allow users to learn more about the photographer, Tierney.
 - Allow users to see examples of his past works.
+- Allow the owner of the site to login and upload/edit photosets to sell.
+- Allow users to register/login so that they can access the full features of the site.
 - Allow users to buy photosets from him, and download them to use as they wish.
 
 ## Demo
@@ -27,10 +29,40 @@ This was because I wanted people to be able to trust that what they were buying,
 5. As an interested shopper, I want to be able to access the shop and see what is on sale, so that I can browse photosets.
 6. As an interested shopper, I want to be able to add photosets to my cart, so that I can purchase more than one at a time.
 7. As a purchaser, I want to be able to view and download my past orders, so that I can access the content that I have paid for.
+8. As an admin of the website, I want to be able to login to my superuser account, so that I can upload new photosets to the shop.
+9. As an admin of the website, I want to be able to login to my superuser account, so that I can edit photosets that have been uploaded.
+10. As an admin of the website, I want to be able to see all of the orders that have been made, so that I can see what customers are most interested in.
 
 #### Wireframe Mockups
 
-
+- [Index - Desktop](wireframes/index-desktop.png).
+- [Index - Tablet](wireframes/index-tablet.png).
+- [Index - Mobile](wireframes/index-mobile.png).
+- [Index - Mobile - Menu Open](wireframes/index-mobile-menuopen.png).
+- [Gallery - Desktop](wireframes/gallery-desktop.png).
+- [Gallery - Tablet](wireframes/gallery-tablet.png).
+- [Gallery - Mobile](wireframes/gallery-mobile.png).
+- [Shop - Desktop](wireframes/shop-desktop.png).
+- [Shop - Tablet](wireframes/shop-tablet.png).
+- [Shop - Mobile](wireframes/shop-mobile.png).
+- [About - Desktop](wireframes/about-desktop.png).
+- [About - Tablet](wireframes/about-tablet.png).
+- [About - Mobile](wireframes/about-mobile.png).
+- [Register - Desktop](wireframes/register-desktop.png).
+- [Register - Tablet](wireframes/register-tablet.png).
+- [Register - Mobile](wireframes/register-mobile.png).
+- [Login - Desktop](wireframes/login-desktop.png).
+- [Login - Tablet](wireframes/login-tablet.png).
+- [Login - Mobile](wireframes/login-mobile.png).
+- [Account Details - Desktop](wireframes/accountdetails-desktop.png).
+- [Account Details - Tablet](wireframes/accountdetails-tablet.png).
+- [Account Details - Mobile](wireframes/accountdetails-mobile.png).
+- [Orders - Desktop](wireframes/orders-desktop.png).
+- [Orders - Tablet](wireframes/orders-tablet.png).
+- [Orders - Mobile](wireframes/orders-mobile.png).
+- [Downloads - Desktop](wireframes/downloads-desktop.png).
+- [Downloads - Tablet](wireframes/downloads-tablet.png).
+- [Downloads - Mobile](wireframes/downloads-mobile.png).
 
 ## Features
 
