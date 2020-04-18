@@ -26,7 +26,7 @@
 				{% for item in cart_items %}
                 <tr>
 					<th scope="row"><a href="{% url 'remove_from_cart' item.id %}">X</a></th>
-					<td><img style="height: 75px; width: 75px" src="{{ MEDIA_URL }}{{ item.photoset.preview_image }}" alt="Card image"></td>
+					<td><div class="cart-preview-image" style="background-image: url('{{ MEDIA_URL }}{{ item.photoset.preview_image }}')" alt="Card image"></div></td>
 					<td>{{ item.photoset.title }}</td>
 					<td>£ {{ item.photoset.price }}</td>
 				</tr>

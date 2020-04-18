@@ -14,6 +14,7 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required
 def checkout(request):
+    """ Renders checkout page with forms, if posted tries to process the order and shows errors if there are issues """
     if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
@@ -32,7 +33,7 @@ def checkout(request):
                     order=order,
                     photoset=photoset
                 )
-                order_line_item.save
+                order_line_item.save()
             try:
                 customer = stripe.Charge.create(
                     amount=int(total * 100),

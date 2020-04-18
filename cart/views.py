@@ -12,7 +12,7 @@ def add_to_cart(request, id):
     cart = request.session.get('cart', {})
 
     if id not in cart.keys():
-        cart[id] = id
+        cart[id] = cart.get(id)
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))

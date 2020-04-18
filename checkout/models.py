@@ -4,6 +4,7 @@ from shop.models import PhotoSet
 
 
 class Order(models.Model):
+    """ Model for user data to be entered into when making an order """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=25, blank=False)
     second_name = models.CharField(max_length=25, blank=False)
@@ -18,8 +19,10 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
+    """ Model for title and price of each line of the order """
     order = models.ForeignKey(Order, null=False, on_delete=models.CASCADE)
     photoset = models.ForeignKey(PhotoSet, null=False, on_delete=models.CASCADE)
+    quantity = models.IntegerField(blank=False)
 
     def __str__(self):
-        return "{0} @ {1}".format(self.photoset.name, self.photoset.price)
+        return "{0} @ {1}".format(self.photoset.title, self.photoset.price)

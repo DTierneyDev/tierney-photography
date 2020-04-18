@@ -12,3 +12,13 @@
     background-repeat: no-repeat;
     margin: 0 auto;
 }
+
+.cart-preview-image {
+    height: 2.5em;
+    width: 5em;
+    display: block;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
