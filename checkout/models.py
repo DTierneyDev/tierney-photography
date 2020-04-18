@@ -22,7 +22,6 @@ class OrderLineItem(models.Model):
     """ Model for title and price of each line of the order """
     order = models.ForeignKey(Order, null=False, on_delete=models.CASCADE)
     photoset = models.ForeignKey(PhotoSet, null=False, on_delete=models.CASCADE)
-    quantity = models.IntegerField(blank=False)
 
     def __str__(self):
         return "{0} @ {1}".format(self.photoset.title, self.photoset.price)

@@ -37,7 +37,6 @@
 				<tr>
 					<th scope="col">Order No</th>
 					<th scope="col">Date</th>
-					<th scope="col">Total</th>
 					<th scope="col">Photosets Purchased</th>
 				</tr>
 			</thead>
@@ -46,7 +45,6 @@
                 <tr>
 					<th scope="row">{{ order.id }}</th>
 					<td>{{ order.date }}</td>
-					<td>{{ order.total }}</td>
 					<td>
                     {% for item in order.orderlineitem_set.all %}
                         {{ item.photoset.title }} 
