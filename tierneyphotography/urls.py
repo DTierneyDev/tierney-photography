@@ -22,8 +22,10 @@ from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', RedirectView.as_view(url='accounts/')),
+    url(r'^', include('home.urls')),
     url(r'accounts/', include('accounts.urls')),
+    url(r'gallery/', include('gallery.urls')),
+    url(r'about/', include('about.urls')),
     url(r'shop/', include('shop.urls')),
     url(r'cart/', include('cart.urls')),
     url(r'checkout/', include('checkout.urls')),

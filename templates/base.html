@@ -30,13 +30,13 @@
 					<a class="nav-link" href="{% url 'index' %}">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Gallery</a>
+					<a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="{% url 'shop' %}">Shop</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="{% url 'about' %}">About</a>
 				</li>
                 {% if user.is_authenticated %}
                     {% if user.is_superuser %}
