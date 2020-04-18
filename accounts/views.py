@@ -3,6 +3,7 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from checkout.models import Order, OrderLineItem
 
 
 # def index(request):
@@ -73,3 +74,18 @@ def user_profile(request):
     """Render the user's profile page"""
     user = User.objects.get(email=request.user.email)
     return render(request, 'profile.html', {"profile": user})
+
+
+@login_required
+def orders(request):
+    """Render the user's orders page"""
+    user = User.objects.get(username=request.user.username)
+    orders = Order.objects.filter(user=request.user)
+    return render(request, 'orders.html', {"profile": user, "orders": orders})
+
+
+@login_required
+def downloads(request):
+    """Render the user's downloads page"""
+    orders = User.objects.get(email=request.user.email)
+    return render(request, 'downloads.html', {"orders": orders})

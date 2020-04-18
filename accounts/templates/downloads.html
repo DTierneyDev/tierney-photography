@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block page_title %}{{ user }}'s Downloads{% endblock%}
+
+{% block content %}
+
+<div class="container mt-4">
+	<div class="col-12">
+		<div class="row">
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'profile' %}">Account Details</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'orders' %}">Orders</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="{% url 'downloads' %}">Downloads</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container mt-4">
+	<div class="col-12">
+		<div class="row">
+			<h1>{{ user }}'s Downloads</h1>
+		</div>
+	</div>
+</div>
+
+<div class="container mt-4">
+    <div class="row">
+	{% for photoset in photosets %}
+		<div class="col-4">
+			<a href="{% url 'photoset_detail' photoset.id %}"><div class="card border-primary mb-3">
+				<h3 class="card-header">{{ photoset.title }}</h3>
+				<div class="photoset-preview-image" style="background-image: url('{{ MEDIA_URL }}{{ photoset.preview_image }}')" alt="Card image"></div>
+                <div class="card-body">
+					<p class="card-text">{{ photoset.description|truncatewords:10 }}</p>
+				</div>
+				<div class="card-body">
+					<!-- <a href="{% url 'download' photoset.id %}" class="btn btn-danger btn-sm">Download</a> -->
+				</div>
+				<div class="card-footer text-muted">
+					{{ photoset.published_date }}
+				</div>
+			</div></a>
+		</div>
+	{% endfor %}
+    </div>
+</div>
+
+{% endblock %}

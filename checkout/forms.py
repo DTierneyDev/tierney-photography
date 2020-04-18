@@ -17,4 +17,5 @@ class MakePaymentForm(forms.Form):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('first_name', 'second_name', 'address1', 'address2', 'city', 'postcode')
+        fields = ('user', 'first_name', 'second_name', 'address1', 'address2', 'city', 'postcode')
+        widgets = {'user': forms.HiddenInput()}

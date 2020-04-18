@@ -58,6 +58,6 @@ def checkout(request):
             return redirect(reverse('view_cart'))
         else:
             payment_form = MakePaymentForm()
-            order_form = OrderForm()
+            order_form = OrderForm(initial={'user': request.user.id})
 
     return render(request, 'checkout.html', {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
