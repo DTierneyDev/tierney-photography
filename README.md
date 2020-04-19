@@ -15,6 +15,10 @@ The goals of this site are to:
 
 A demo can be viewed on Heroku [here](https://tierney-photography.herokuapp.com/).
 
+Superuser login details are below:
+User: admin
+Password: Ph0toP4ck$
+
 ## UX
 
 My goal with the design of this site, was to make it look professional.
