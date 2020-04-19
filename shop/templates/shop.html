@@ -14,6 +14,18 @@
 </div>
 <!-- /PAGE TITLE -->
 
+<!-- REGISTRATION MESSAGE -->
+{% if not user.is_authenticated %}
+<div class="container mt-4">
+    <div class="col-12">
+        <div class="row">
+            <p>To purchase a photoset from this shop, you will need to <a href="{% url 'login' %}">login</a> so that they can be applied to your account.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+<!-- /REGISTRATION MESSAGE -->
+
 <!-- PHOTOSET CARDS -->
 <div class="container mt-4 before-footer">
     <div class="row">

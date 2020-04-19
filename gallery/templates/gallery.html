@@ -4,12 +4,101 @@
 
 {% block content %}
 
+<!-- PAGE TITLE -->
 <div class="container mt-4">
-    <div class="col-12">
-        <div class="row">
-            <h1>Gallery</h1>
-        </div>
-    </div>
+	<div class="col-12">
+		<div class="row">
+			<h1>Gallery</h1>
+		</div>
+	</div>
 </div>
+<!-- /PAGE TITLE -->
+
+<!-- CAROUSEL -->
+<div class="container-fluid carousel-container">
+	<div class="row">
+		<div class="col-12">
+			<div id="carouselHome" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselHome" data-slide-to="1"></li>
+					<li data-target="#carouselHome" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<!-- SKY JUMBOTRON -->
+						<div class="container-fluid gallery-container sky-container">
+							<div class="row">
+								<div class="col-12">
+									<section class="jumbotron text-center">
+										<h5 class="jumbotron-header">Sky Photoset, Coming Soon</h5>
+										<hr class="my-4">
+										<p class="text-primary">This one is a little preview of a photo I call "Dull Sky", this will be
+											included in the Sky photoset which will release soon.</p>
+									</section>
+								</div>
+							</div>
+						</div>
+						<!-- /SKY JUMBOTRON -->
+					</div>
+					<div class="carousel-item">
+						<!-- AMIBO JUMBOTRON -->
+						<div class="container-fluid gallery-container amibo-container">
+							<div class="row">
+								<div class="col-12">
+									<section class="jumbotron text-center">
+										<h5 class="jumbotron-header">Amibo Photoset, Coming Soon</h5>
+										<hr class="my-4">
+										<p class="text-primary">This one is a little preview of a photo I call "Amibo Gang", this will be
+											included in the Amibo photoset which will release soon.</p>
+									</section>
+								</div>
+							</div>
+						</div>
+						<!-- /AMIBO JUMBOTRON -->
+					</div>
+					<div class="carousel-item">
+						<!-- LEGO JUMBOTRON -->
+						<div class="container-fluid gallery-container lego-container">
+							<div class="row">
+								<div class="col-12">
+									<section class="jumbotron text-center">
+										<h5 class="jumbotron-header">Lego Photoset, Coming Soon</h5>
+										<hr class="my-4">
+										<p class="text-primary">This one is a little preview of a photo I call "Lego Desk", this will be
+											included in the Lego photoset which will release soon.</p>
+									</section>
+								</div>
+							</div>
+						</div>
+						<!-- /LEGO JUMBOTRON -->
+					</div>
+				</div>
+				<div class="d-none d-lg-block">
+					<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /CAROUSEL -->
+
+<!-- SHOP LINK -->
+<div class="container before-footer pt-3">
+	<div class="row">
+		<div class="col-12 text-center">
+			<p>If you like what you see, feel free to check out my new shop.</p>
+			<a class="btn btn-primary mb-2" href="{% url 'shop' %}">Shop</a>
+		</div>
+	</div>
+</div>
+<!-- SHOP LINK -->
 
 {% endblock %}

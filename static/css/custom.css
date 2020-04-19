@@ -26,6 +26,54 @@ body {
     flex-shrink: 0;
 }
 
+/* -- CONTAINERS -- */
+.index-container {
+    height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.gallery-container {
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.sky-container{
+    background: url('/static/img/sky.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.amibo-container{
+    background: url('/static/img/amibo.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.lego-container{
+    background: url('/static/img/lego.jpg') no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 /* -- IMAGES -- */
 
 .photoset-preview-image {

@@ -43,7 +43,7 @@
 				<tbody>
 					{% for item in cart_items %}
 					<tr>
-						<th scope="row"><a href="{% url 'remove_from_cart' item.id %}">X</a></th>
+						<th scope="row"><a href="{% url 'remove_from_cart' item.id %}" class="remove-from-cart">X</a></th>
 						<td class="d-none d-sm-block">
 							<div class="cart-preview-image"
 								style="background-image: url('{{ MEDIA_URL }}{{ item.photoset.preview_image }}')"

@@ -4,4 +4,65 @@
 
 {% block content %}
 
+<!-- CAROUSEL -->
+<div class="container-fluid carousel-container before-footer">
+    <div class="row">
+        <div class="col-12">
+            <div id="carouselHome" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselHome" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <!-- SHOP JUMBOTRON -->
+                        <div class="container-fluid index-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <section class="jumbotron text-center">
+                                        <h1 class="jumbotron-header">Shop now open!</h1>
+                                        <hr class="my-4">
+                                        <p>Sets are now available for purchase through the shop.
+                                            If you've ever wanted to support my work, now is the time!</p>
+                                        <p>New sets will become available as they are finished.</p>
+                                        <a class="btn btn-lg btn-primary" href="{% url 'shop' %}">Browse Here!</a>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /SHOP JUMBOTRON -->
+                    </div>
+                    <div class="carousel-item">
+                        <!-- REGISTER JUMBOTRON -->
+                        <div class="container-fluid index-container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <section class="jumbotron text-center">
+                                        <h1 class="jumbotron-header">Registration now open!</h1>
+                                        <hr class="my-4">
+                                        <p>Along with the online shop, you can now register to the website and access your purchases via the account page.</p>
+                                        <a class="btn btn-lg btn-primary" href="{% url 'registration' %}">Register Here!</a>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /REGISTER JUMBOTRON -->
+                    </div>
+                </div>
+                <div class="d-none d-lg-block">
+                    <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /CAROUSEL -->
+
 {% endblock %}
