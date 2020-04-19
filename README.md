@@ -171,6 +171,8 @@ This takes the user to the django administration backend and will allow them to 
 HTML documents were tested using: https://www.freeformatter.com/html-validator.html  
 My CSS sheet was tested using: https://jigsaw.w3.org/css-validator/
 
+The build for this project is tested by Travis CI automatically after each push.
+
 1. Login - Login form
     1. Went to the login page.
     2. Tried to submit with any empty fields. Confirmed that an error message appears about the required fields.
