@@ -1,5 +1,30 @@
+html,
+body {
+    height: 100%;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+}
 
+/* -- FOOTER -- */
+
+.footer-link {
+    color: rgba(255,255,255,0.5);
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: .715rem;
+    padding-bottom: .715rem;
+}
+
+.before-footer {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
 
 /* -- IMAGES -- */
 
@@ -21,4 +46,9 @@
     background-position: center center;
     background-repeat: no-repeat;
     margin: 0 auto;
+}
+
+
+@media (min-width: 992px) {
+
 }

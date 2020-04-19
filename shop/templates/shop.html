@@ -3,6 +3,8 @@
 {% block page_title %}Shop{% endblock %}
 
 {% block content %}
+
+<!-- PAGE TITLE -->
 <div class="container mt-4">
     <div class="col-12">
         <div class="row">
@@ -10,11 +12,13 @@
         </div>
     </div>
 </div>
+<!-- /PAGE TITLE -->
 
-<div class="container mt-4">
+<!-- PHOTOSET CARDS -->
+<div class="container mt-4 before-footer">
     <div class="row">
 	{% for photoset in photosets %}
-		<div class="col-4">
+		<div class="col-md-12 col-lg-4">
 			<a href="{% url 'photoset_detail' photoset.id %}"><div class="card border-primary mb-3">
 				<h3 class="card-header">{{ photoset.title }}</h3>
 				<div class="photoset-preview-image" style="background-image: url('{{ MEDIA_URL }}{{ photoset.preview_image }}')" alt="Card image"></div>
@@ -33,4 +37,6 @@
 	{% endfor %}
     </div>
 </div>
+<!-- PHOTOSET CARDS -->
+
 {% endblock %}

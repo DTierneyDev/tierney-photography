@@ -7,17 +7,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>{% block page_title %}{% endblock %}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    {% block head_js %}
-    {% endblock head_js %}
+	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	{% block head_js %}
+	{% endblock head_js %}
 </head>
 
 <body>
-    <!-- NAVBAR -->
+	<!-- NAVBAR -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="{% url 'index' %}">Tierney Photography</a>
 		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,56 +40,78 @@
 				<li class="nav-item">
 					<a class="nav-link" href="{% url 'about' %}">About</a>
 				</li>
-                {% if user.is_authenticated %}
-                    {% if user.is_superuser %}
-                        <li class="nav-item">
-                            <!-- <a class="nav-link" href="{% url 'new_photoset' %}">Admin</a> -->
-                            <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
-                        </li>
-                    {% endif %}
-                <li class="nav-item">
+				{% if user.is_authenticated %}
+				{% if user.is_superuser %}
+				<li class="nav-item">
+					<!-- <a class="nav-link" href="{% url 'new_photoset' %}">Admin</a> -->
+					<a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
+				</li>
+				{% endif %}
+				<li class="nav-item">
 					<a class="nav-link" href="{% url 'profile' %}">Account</a>
 				</li>
-                <li class="nav-item">
+				<li class="nav-item">
 					<a class="nav-link" href="{% url 'logout' %}">Logout</a>
 				</li>
-                {% else %}
-                <li class="nav-item">
+				{% else %}
+				<li class="nav-item">
 					<a class="nav-link" href="{% url 'login' %}">Login</a>
 				</li>
-                <li class="nav-item">
+				<li class="nav-item">
 					<a class="nav-link" href="{% url 'registration' %}">Register</a>
 				</li>
-                {% endif %}
+				{% endif %}
 			</ul>
-            <ul class="navbar-nav inline my-2 my-lg-0">
-                <li class="nav-item">
-					<a class="nav-link" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg"></i> Cart ({{ photoset_count }})</a>
+			<ul class="navbar-nav inline my-2 my-lg-0">
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg"></i> Cart
+						({{ photoset_count }})</a>
 				</li>
-            </ul>
+			</ul>
 		</div>
 	</nav>
-    <!-- /NAVBAR -->
+	<!-- /NAVBAR -->
 
-    <!-- MESSAGES -->
-    {% if messages %}
-    <div class="alert alert-success" role="alert">
-    {% for message in messages %}
-        {{ message }}
-    {% endfor %}
-    </div>
-    {% endif %}
-    <!-- /MESSAGES -->
+	<!-- MESSAGES -->
+	{% if messages %}
+	<div class="alert alert-success" role="alert">
+		{% for message in messages %}
+		{{ message }}
+		{% endfor %}
+	</div>
+	{% endif %}
+	<!-- /MESSAGES -->
 
-    <!-- PAGE-CONTENT -->
-    {% block content %}
+	<!-- PAGE-CONTENT -->
+	{% block content %}
 
-    {% endblock %}
-    <!-- /PAGE-CONTENT -->
+	{% endblock %}
+	<!-- /PAGE-CONTENT -->
 
-    <!-- FOOTER -->
-
-    <!-- /FOOTER -->
+	<!-- FOOTER -->
+	<footer class="footer navbar-dark bg-primary">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 pt-3 text-center">
+					<ul class="list-inline">
+						<li class="list-inline-item nav-item">
+							<a class="footer-link" href="#"><i class="fab fa-facebook-f"></i></a>
+						</li>
+						<li class="list-inline-item nav-item">
+							<a class="footer-link" href="#"><i class="fab fa-twitter"></i></a>
+						</li>
+						<li class="list-inline-item nav-item">
+							<a class="footer-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+						<li class="list-inline-item nav-item">
+							<a class="footer-link" href="#"><i class="fab fa-instagram"></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /FOOTER -->
 
 	<!-- SCRIPTS -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
