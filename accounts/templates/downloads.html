@@ -31,25 +31,27 @@
 </div>
 
 <div class="container mt-4">
-    <div class="row">
-	{% for photoset in photosets %}
+	<div class="row">
+		{% for order in orders %}
+		{% for item in order.orderlineitem_set.all %}
 		<div class="col-4">
-			<a href="{% url 'photoset_detail' photoset.id %}"><div class="card border-primary mb-3">
-				<h3 class="card-header">{{ photoset.title }}</h3>
-				<div class="photoset-preview-image" style="background-image: url('{{ MEDIA_URL }}{{ photoset.preview_image }}')" alt="Card image"></div>
-                <div class="card-body">
-					<p class="card-text">{{ photoset.description|truncatewords:10 }}</p>
+				<div class="card border-primary mb-3">
+					<h3 class="card-header">{{ item.photoset.title }}</h3>
+					<div class="photoset-preview-image"
+						style="background-image: url('{{ MEDIA_URL }}{{ item.photoset.preview_image }}')"
+						alt="Card image"></div>
+					<div class="card-body">
+						<p class="card-text">{{ item.photoset.description|truncatewords:10 }}</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="btn btn-danger btn-sm">Download</a>
+                        
+					</div>
 				</div>
-				<div class="card-body">
-					<!-- <a href="{% url 'download' photoset.id %}" class="btn btn-danger btn-sm">Download</a> -->
-				</div>
-				<div class="card-footer text-muted">
-					{{ photoset.published_date }}
-				</div>
-			</div></a>
 		</div>
-	{% endfor %}
-    </div>
+		{% endfor %}
+		{% endfor %}
+	</div>
 </div>
 
 {% endblock %}

@@ -87,5 +87,6 @@ def orders(request):
 @login_required
 def downloads(request):
     """Render the user's downloads page"""
-    orders = User.objects.get(email=request.user.email)
-    return render(request, 'downloads.html', {"orders": orders})
+    user = User.objects.get(username=request.user.username)
+    orders = Order.objects.filter(user=request.user)
+    return render(request, 'downloads.html', {"profile": user, "orders": orders})
