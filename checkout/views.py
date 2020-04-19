@@ -26,6 +26,7 @@ def checkout(request):
 
             cart = request.session.get('cart', {})
             total = 0
+            customer = None
             for id in cart.keys():
                 photoset = get_object_or_404(PhotoSet, pk=id)
                 total += photoset.price
@@ -52,11 +53,14 @@ def checkout(request):
                     return redirect(reverse('profile'))
                 else:
                     messages.error(request, "Unable to take payment")
+                    return redirect(reverse("checkout"))
             else:
                 messages.error(request, "Unable to take payment")
+                return redirect(reverse("checkout"))
         else:
             print(payment_form.errors)
             messages.error(request, "We were unable to take a payment with that card!")
+            return redirect(reverse("checkout"))
     else:
         if request.session.get('cart', {}) == {}:
             messages.error(request, "You cannot checkout with no items in the cart")

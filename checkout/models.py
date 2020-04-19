@@ -7,7 +7,7 @@ class Order(models.Model):
     """ Model for user data to be entered into when making an order """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=25, blank=False)
-    second_name = models.CharField(max_length=25, blank=False)
+    last_name = models.CharField(max_length=25, blank=False)
     address1 = models.CharField(max_length=60, blank=False)
     address2 = models.CharField(max_length=60, blank=False)
     city = models.CharField(max_length=40, blank=False)
@@ -15,7 +15,7 @@ class Order(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return "{0}-{1}-{2}-{3}".format(self.id, self.date, self.first_name, self.second_name)
+        return "{0}-{1}-{2}-{3}".format(self.id, self.date, self.first_name, self.last_name)
 
 
 class OrderLineItem(models.Model):
