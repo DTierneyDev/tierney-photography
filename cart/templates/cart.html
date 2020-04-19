@@ -28,7 +28,7 @@
 			<tbody>
 				{% for item in cart_items %}
                 <tr>
-					<th scope="row"><a href="{% url 'remove_from_cart' item.id %}">X</a></th>
+					<th scope="row"><a href="{% url 'remove_from_cart' item.id %}" class="remove-from-cart">X</a></th>
 					<td>{{ item.photoset.title }}</td>
 					<td>£ {{ item.photoset.price }}</td>
 				</tr>

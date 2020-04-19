@@ -63,8 +63,8 @@
 			</ul>
 			<ul class="navbar-nav inline my-2 my-lg-0">
 				<li class="nav-item">
-					<a class="nav-link" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart fa-lg"></i> Cart
-						({{ photoset_count }})</a>
+					<a class="nav-link" href="{% url 'view_cart' %}" id="cart-nav-bar"><i class="fas fa-shopping-cart fa-lg"></i> Cart
+						(<span id="cart-count" class="">{{ photoset_count }}</span>)</a>
 				</li>
 			</ul>
 		</div>
@@ -114,7 +114,14 @@
 
 	<!-- SCRIPTS -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 	<!-- /SCRIPTS -->
+
+     <!-- ONLOAD -->
+    <script>
+        window.onload = highlightCart();
+    </script>
+    <!-- /ONLOAD -->
 </body>
 
 </html>

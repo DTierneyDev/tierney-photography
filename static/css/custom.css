@@ -77,7 +77,7 @@ body {
 /* -- IMAGES -- */
 
 .photoset-preview-image {
-    height: 200px;
+    height: 14em;
     width: 100%;
     display: block;
     background-size: contain;
@@ -86,17 +86,12 @@ body {
     margin: 0 auto;
 }
 
-.cart-preview-image {
-    height: 2.5em;
-    width: 5em;
-    display: block;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 0 auto;
+/* -- TEXT -- */
+
+.cart-text--green {
+    color:#28a745 !important;
 }
 
-
-@media (min-width: 992px) {
-
+.remove-from-cart {
+    color: #fe4242;
 }

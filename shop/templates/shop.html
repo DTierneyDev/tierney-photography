@@ -33,7 +33,7 @@
 		<div class="col-md-12 col-lg-4">
 			<a href="{% url 'photoset_detail' photoset.id %}"><div class="card border-primary mb-3">
 				<h3 class="card-header">{{ photoset.title }}</h3>
-				<div class="photoset-preview-image" style="background-image: url('{{ MEDIA_URL }}{{ photoset.preview_image }}')" alt="Card image"></div>
+				<div class="photoset-preview-image" style="background-image: url('{{ MEDIA_URL }}{{ photoset.preview_image }}')"></div>
                 <div class="card-body">
 					<p class="card-text">{{ photoset.description|truncatewords:10 }}</p>
 				</div>

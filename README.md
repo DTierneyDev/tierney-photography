@@ -74,6 +74,7 @@ This was because I wanted people to be able to trust that what they were buying,
 ## Features
 
 Each page features a navigation bar with a brand-logo. On mobile this become a toggle navbar.  
+I have added a javascript function to highlight the cart green when more than 0 photosets are in it. This is to highlight to the customer that there are items inside their cart, and where to click to see those items.  
 The pages also feature a footer with social media links.
  
 ### Existing Features
@@ -100,10 +101,14 @@ In this section, you should mention all of the languages, frameworks, libraries,
 11. Amazon S3
 12. Stripe
 13. Javascript
-14. Font Awesome
+14. FontAwesome
 15. Bootswatch
 
 ## Testing
+
+HTML documents were tested using: https://www.freeformatter.com/html-validator.html  
+My CSS sheet was tested using: https://jigsaw.w3.org/css-validator/validator  
+
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
