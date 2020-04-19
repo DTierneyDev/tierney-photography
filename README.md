@@ -152,8 +152,6 @@ This takes the user to the django administration backend and will allow them to 
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 1. HTML
 2. CSS
 3. Bootstrap (4.4)
@@ -171,7 +169,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 ## Testing
 
 HTML documents were tested using: https://www.freeformatter.com/html-validator.html  
-My CSS sheet was tested using: https://jigsaw.w3.org/css-validator/validator  
+My CSS sheet was tested using: https://jigsaw.w3.org/css-validator/
 
 1. Login - Login form
     1. Went to the login page.
@@ -183,18 +181,22 @@ My CSS sheet was tested using: https://jigsaw.w3.org/css-validator/validator
     1. Went to the register page.
     2. Tried to submit with any empty fields. Confirmed that an error message appears about the required fields.
     3. Tried to submit invalid email address. Confirmed that an error message appears about the format.
-    4. Tried to submit an in use username. Confirmed that an error message appears about username being taken.
+    4. Tried to submit an already used username. Confirmed that an error message appears about username being taken.
     5. Tried to submit different passwords. Confirmed that an error message appears stating passwords must match.
     6. Submitted correct data. Confirmed that the user is registered/logged in.
 
-3. Checkout - Checkout form
+3. Cart 
+    1. Tried to checkout with an empty cart. Confirmed an error message appears and stops the user checking out with no items.
+    2. Tried to checkout with items in the cart. Confirmed that it sent me to the checkout page with correct items showing.
+
+4. Checkout - Checkout form
     1. Went to checkout page.
     2. Tried to submit form with any empty fields. Confirmed that an error message appears about the required fields.
     3. Tried to submit incorrect card data. Confirmed that an error message appears that we couldn't take payment and order wasn't processed.
     4. Tried to submit correct test card data. Confirmed that the order has gone through and appears on user's download page.
 
-In addition to this I had my friend test the site for me as he is a QA Tester. He found a few small issues that were recitified.  
-Although there was one issue that he found that I haven't had time to fix. If you put in certain incorrect card data, such as wrong length of number. The error is printed into the console but no feedback given to the user.
+In addition to the above I had my friend test the site for me as he is a QA Tester. He found a few small issues that were recitified.  
+Although there was one issue that he found that I haven't had time to fix. If you put in certain incorrect card data, such as wrong length of number. The stripe error is printed into the console but no feedback is given to the user.
 
 ## Deployment
 
@@ -205,13 +207,13 @@ In order for the deployed site to work correctly on Heroku, there must be a proc
 While working on the project, an env.py file was used to store any keys that I didn't want the public to see. This includes:  
 SECRET_KEY, DATABASE_URL, STRIPE_PUBLISHABLE, STRIPE_SECRET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY.  
 
-On the Heroku deployment the about keys are input into the config vars directlty. This keeps them out of the local files and stops anyone being able to use them.
+On the Heroku deployment the above keys are input into the config vars directlty. This keeps them out of the local files and stops anyone being able to use them.
 
 A demo can be viewed on Heroku [here](https://tierney-photography.herokuapp.com/).
 
 ## Credits
 
-The websites initial css theme was "Lux", which was acquired from [Bootswatch](https://bootswatch.com/lux/)
+The websites initial bootstrap/css theme was "Lux", which was acquired from [Bootswatch](https://bootswatch.com/lux/)
 
 ### Media
 - The photos used on this site were taken by myself (As you can tell I'm not a real photographer).
