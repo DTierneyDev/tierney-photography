@@ -15,9 +15,9 @@ The goals of this site are to:
 
 A demo can be viewed on Heroku [here](https://tierney-photography.herokuapp.com/).
 
-Superuser login details are below:
-User: admin
-Password: Ph0toP4ck$
+Superuser login details are below:  
+User: admin  
+Password: Ph0toP4ck$  
 
 ## UX
 
@@ -73,7 +73,8 @@ This was because I wanted people to be able to trust that what they were buying,
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+Each page features a navigation bar with a brand-logo. On mobile this become a toggle navbar.  
+The pages also feature a footer with social media links.
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
@@ -88,9 +89,19 @@ For some/all of your features, you may choose to reference the specific project 
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
+1. HTML
+2. CSS
+3. Bootstrap (4.4)
+5. Jquery
+6. Django
+8. Python
+9. Postgres
+10. Heroku
+11. Amazon S3
+12. Stripe
+13. Javascript
+14. Font Awesome
+15. Bootswatch
 
 ## Testing
 
@@ -125,6 +136,9 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 
 ## Credits
+
+The websites initial css theme was "Lux", which was acquired from [Bootswatch](https://bootswatch.com/lux/)
+
 ### Media
 - The photos used on this site were taken by myself (As you can tell I'm not a real photographer).
 - The image of the camera on the about page was found on [Pexels](https://www.pexels.com/), a stock image website.

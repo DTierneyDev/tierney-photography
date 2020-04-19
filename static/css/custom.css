@@ -76,24 +76,6 @@ body {
 
 /* -- IMAGES -- */
 
-/* .about-image-camera {
-    background: url('/static/img/camera.jpg') no-repeat center center fixed;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.about-image-tierney {
-    background: url('/static/img/tierney-photographer.jpg') no-repeat center center fixed;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-} */
-
 .photoset-preview-image {
     height: 200px;
     width: 100%;

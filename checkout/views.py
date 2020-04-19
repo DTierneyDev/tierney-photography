@@ -43,11 +43,15 @@ def checkout(request):
                 )
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
+                return redirect(reverse("checkout"))
 
-            if customer.paid:
-                messages.error(request, "Your purchase has been completed! Photosets are now available in your account")
-                request.session['cart'] = {}
-                return redirect(reverse('profile'))
+            if customer is not None:
+                if customer.paid:
+                    messages.error(request, "Your purchase has been completed! Photosets are now available in your account")
+                    request.session['cart'] = {}
+                    return redirect(reverse('profile'))
+                else:
+                    messages.error(request, "Unable to take payment")
             else:
                 messages.error(request, "Unable to take payment")
         else:
