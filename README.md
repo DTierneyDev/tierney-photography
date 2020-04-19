@@ -18,6 +18,9 @@ A demo can be viewed on Heroku [here](https://tierney-photography.herokuapp.com/
 Superuser login details are below:  
 User: admin  
 Password: Ph0toP4ck$  
+  
+Stripe is in test mode so you can use any of the test card numbers from their documentation.  
+4242 4242 4242 4242 is a valid card. You may use any 3 digits for cvc and a future date for expiry.
 
 ## UX
 
@@ -77,14 +80,75 @@ Each page features a navigation bar with a brand-logo. On mobile this become a t
 I have added a javascript function to highlight the cart green when more than 0 photosets are in it. This is to highlight to the customer that there are items inside their cart, and where to click to see those items.  
 The pages also feature a footer with social media links.
  
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+#### Index
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+This page features a carousel, which has 2 slides.  
+These slides provide information on 2 new features on the site and provide links to the pages.
+
+#### Gallery
+
+This page features a carousel, which has 3 slides.  
+These slides show preview pictures/information on upcoming photosets.  
+This page also features a button to take you to the shop.
+
+#### Shop
+
+This page features cards containing all of the details of each photoset that is for sale.  
+You can use the add to cart button to add these sets to your cart, as well as click elsewhere on the card to be taken to a page with more details.
+
+#### Shop-Details
+
+This page features the card of the photoset you clicked from the shop.  
+Unlike the shop, this shows the full description.
+
+#### About
+
+This page features 2 sections of information to learn about the website/owner.
+
+#### Login
+
+This page contains a login form that will log a user into the website.  
+There is also a link to the registration page, for if the user doesn't yet have an account.
+
+#### Register
+
+This page contains a registration form that will create an account for the website.  
+There is also a link to the login page, for if the user already has an account.
+
+#### Account
+
+This page is split into 3 different pages, navigated between via the pills.  
+
+The account details page will show the username & email address for the current user.  
+
+The orders page shows details of past orders by the current user.  
+
+The downloads page shows each photoset that the current user has purchased. Using the download button, the user can download the photoset for their own use.
+
+#### Logout
+
+Using this link on the navbar will log the current user out and direct them back to the home page.
+
+#### Cart
+
+This page shows all of the photosets that have been added to the cart by the user.  
+Using the red X next to photoset they can remove them from the cart.  
+If they press the checkout button they will be sent to the checkout page.
+
+#### Checkout
+
+This page shows what's in the cart as well as providing forms for the user to complete their purchase.  
+If the user provides valid details in the forms and clicks the submit payment button, the order will go through via stripe and they will be able to access the purchased photosets via the downloads page.  
+If the user provides invalid details, the order will not go through and they will be given an error message.
+
+#### Admin
+If the user is logged into a superuser account, the admin link will appear on the navbar.  
+This takes the user to the django administration backend and will allow them to add/edit photosets and look through orders that have been made.
 
 ### Features Left to Implement
 - A search feature for the shop. This was left out due to time constraints and could certainly be added in the future.
+- Editing user details through the profile page. This was left out due to time constraints and could certainly be added in the future.
+- Saving billing information for future purchases. This was left out due to time constraints and could certainly be added in the future.
 
 ## Technologies Used
 
@@ -109,36 +173,41 @@ In this section, you should mention all of the languages, frameworks, libraries,
 HTML documents were tested using: https://www.freeformatter.com/html-validator.html  
 My CSS sheet was tested using: https://jigsaw.w3.org/css-validator/validator  
 
+1. Login - Login form
+    1. Went to the login page.
+    2. Tried to submit with any empty fields. Confirmed that an error message appears about the required fields.
+    3. Tried to submit incorrect login data. Confirmed that an error message appears about invalid username/password.
+    4. Submitted correct data. Confirmed that the user is logged in.
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+2. Register - Registration form
+    1. Went to the register page.
+    2. Tried to submit with any empty fields. Confirmed that an error message appears about the required fields.
+    3. Tried to submit invalid email address. Confirmed that an error message appears about the format.
+    4. Tried to submit an in use username. Confirmed that an error message appears about username being taken.
+    5. Tried to submit different passwords. Confirmed that an error message appears stating passwords must match.
+    6. Submitted correct data. Confirmed that the user is registered/logged in.
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+3. Checkout - Checkout form
+    1. Went to checkout page.
+    2. Tried to submit form with any empty fields. Confirmed that an error message appears about the required fields.
+    3. Tried to submit incorrect card data. Confirmed that an error message appears that we couldn't take payment and order wasn't processed.
+    4. Tried to submit correct test card data. Confirmed that the order has gone through and appears on user's download page.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+In addition to this I had my friend test the site for me as he is a QA Tester. He found a few small issues that were recitified.  
+Although there was one issue that he found that I haven't had time to fix. If you put in certain incorrect card data, such as wrong length of number. The error is printed into the console but no feedback given to the user.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+This site is hosted using Heroku, it is linked directly to this Github repositories' master branch. The deployment on Heroku is updated automatically everytime a new push is made to the Github repo.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+In order for the deployed site to work correctly on Heroku, there must be a procfile, requirements.txt file and an app file.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+While working on the project, an env.py file was used to store any keys that I didn't want the public to see. This includes:  
+SECRET_KEY, DATABASE_URL, STRIPE_PUBLISHABLE, STRIPE_SECRET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY.  
 
+On the Heroku deployment the about keys are input into the config vars directlty. This keeps them out of the local files and stops anyone being able to use them.
+
+A demo can be viewed on Heroku [here](https://tierney-photography.herokuapp.com/).
 
 ## Credits
 
