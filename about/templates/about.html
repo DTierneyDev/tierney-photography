@@ -1,17 +1,52 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block page_title %}About{% endblock %}
 
 {% block content %}
 
+<!-- PAGE TITLE -->
 <div class="container mt-4">
-    <div class="col-12">
+	<div class="col-12">
+		<div class="row">
+			<h1>About</h1>
+		</div>
+	</div>
+</div>
+<!-- /PAGE TITLE -->
+
+<!-- ABOUT TIERNEY-PHOTOGRAPHY -->
+<div class="container members-container my-4 before-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-6 mb-2">
+				<img src="{% static 'img/camera.jpg' %}" class="img-fluid mx-auto d-block"/>
+            </div>
+			<div class="col-md-12 col-lg-6">
+                <p>Welcome to the website of Tierney Photography. This business was created in 2020 after
+                I got into photography in a really big way. I started off with a simple smartphone, going out into the countryside
+                and taking pictures of anything that took my fancy.</p>
+                <p>Now, as you can see, I take photos as my full time job. By supporting this website you will be
+                supporting me directly.</p>
+			</div>
+		</div>
+    </div>
+    <hr class="my-4">
+    <div class="container">
         <div class="row">
-            <h1>About</h1>
+            <div class="col-md-12 col-lg-6">
+                <p>My name is Daniel Tierney and I am a professional photographer.</p>
+                <p>I grew up in the grey skied town of Oldham, working where ever I could to get by.
+                During those periods I would go out into the countryside and take pictures as a hobby.
+                Due to support from friends/family I made the big leap to doing it full time, and it's so far working out.</p>
+                <p> I love long walks on the beach and anything greyscale.</p>
+            </div>
+            <div class="col-md-12 col-lg-6">
+                <img src="{% static 'img/tierney-photographer.jpg' %}" class="img-fluid mx-auto d-block"/>
+            </div>
         </div>
     </div>
 </div>
+<!-- /ABOUT TIERNEY-PHOTOGRAPHY -->
 
 
-
-{% endblock %}
+	{% endblock %}

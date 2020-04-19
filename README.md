@@ -122,6 +122,7 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 ### Media
-- The photos used in this site were taken by myself (As you can tell I'm not a real photographer)
+- The photos used on this site were taken by myself (As you can tell I'm not a real photographer).
+- The image of the camera on the about page was found on [Pexels](https://www.pexels.com/), a stock image website.
 
 This is for educational use.
