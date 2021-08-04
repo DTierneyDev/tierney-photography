@@ -1,4 +1,4 @@
-# Tierney Photography [![Build Status](https://travis-ci.org/Cobonkoi/tierney-photography.svg?branch=master)](https://travis-ci.org/Cobonkoi/tierney-photography)
+# Tierney Photography [![Build Status](https://travis-ci.org/DTierneyDev/tierney-photography.svg?branch=master)](https://travis-ci.org/DTierneyDev/tierney-photography)
 
 Welcome to Tierney Photography. This is the official website for the photographer, Tierney.
 
